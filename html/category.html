@@ -21,67 +21,22 @@
             <input type="text" placeholder="请输入你想比价的商品" class="seekbox">
             <input type="button" value="搜索" class="seekbut">
         </div>
-        <!-- 内容 -->
-        <ul class="mian">
-            <!-- <li class="mian-z">
-                <div class="mian-title">
-                    <span>大家电</span>
-                    <span>》</span>
+    <!-- 内容 -->
+        <div class="main">
+            <!-- 渲染 -->
+            <!-- <div class="box">
+                <div class="box_title">
+                    <h4>大家电</h4>
+                     <span>></span>
                 </div>
-                <ul class="main-z-z">
-
-                    <li>
-                        <a href="">电视</a>
-                    </li>
-                    <li>
-                        <a href="">电视</a>
-                    </li>
-                    <li>
-                        <a href="">电视</a>
-                    </li>
-                    <li>
-                        <a href="">电视</a>
-                    </li>
-                    <li>
-                        <a href="">电视</a>
-                    </li>
-                    <li>
-                        <a href="">电视</a>
-                    </li>
-
-                </ul>
-            </li>
-            <li class="mian-z">
-                <div class="mian-title">
-                    <span>大家电</span>
-                    <span>》</span>
+                <div class="box_table clearfix">
+                    <div class="col-xs"><a href="">电视</a></div>
+                    <div class="col-xs"><a href="">电视</a></div>
+                    <div class="col-xs"><a href="">电视</a></div>
+                    <div class="col-xs"><a href="">电视</a></div>
                 </div>
-                <ul class="main-z-z">
-
-                    <li>
-                        <a href="">电视</a>
-                    </li>
-                    <li>
-                        <a href="">电视</a>
-                    </li>
-                    <li>
-                        <a href="">电视</a>
-                    </li>
-                    <li>
-                        <a href="">电视</a>
-                    </li>
-                    <li>
-                        <a href="">电视</a>
-                    </li>
-                    <li>
-                        <a href="">电视</a>
-                    </li>
-
-                </ul>
-            </li> -->
-
-
-        </ul>
+            </div> -->
+        </div>
         <!-- 底部 -->
         <div class="foot">
             <div class="foot-t">
@@ -102,32 +57,25 @@
 <!--模板引擎 -->
 <script id="crtl_title" type="text/html">
     {{each arr value index}}
-    <li class="mian-z">
-        <div class="mian-title">
-            <span>{{value.title}}</span>
-            <span class="onlist">》</span>
-        </div>
-        <ul class="main-z-z">
-            <li>
-                <a href="">电视</a>
-            </li>
-        </ul>
-    </li>
+            <div class="box_title">
+                <h4>{{value.title}}</h4>
+                 <span>></span>
+            </div>
+            <div class="box_table clearfix">
+                <!-- 渲染 -->
+            </div>
     {{/each}}
-    <!--  -->
 </script>
 <!--模板引擎 -->
 <script id="crtl_list" type="text/html">
     {{each arr value index}}
-        <li>
-            <a href=""></a>
-        </li>
+    <div class="col-xs"><a href="">{{value.category}}</a></div>
     {{/each}}
-    <!--  -->
 </script>
 <script src="../common/template-web.js"></script>
 </script>
 <script src="http://code.jquery.com/jquery-latest.js"></script>
+<script src="https://cdn.bootcss.com/zepto/1.0rc1/zepto.min.js"></script>
 <script src="../js/category.js"></script>
 
 </html>

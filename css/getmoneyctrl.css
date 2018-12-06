@@ -106,51 +106,37 @@
   color: red;
 }
 
-.mian {
-  margin-bottom: 14px;
+.main {
+  margin-bottom: 15px;
 }
 
-.mian .mian-z .mian-title {
+.main .box_title {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  padding: 0 10px;
+  line-height: 36px;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
 }
 
-.mian .mian-z .mian-title span {
-  line-height: 30px;
-  font-size: 18px;
-}
-
-.mian .mian-z .main-z-z {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+.main .box_table {
   background-color: #fff;
 }
 
-.mian .mian-z .main-z-z li {
-  width: 33.15%;
-  border-bottom: 1px solid #ccc;
+.main .box_table .col-xs {
+  width: 33%;
+  line-height: 30px;
+  float: left;
+  text-align: center;
   border-right: 1px solid #ccc;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  line-height: 24px;
+  border-bottom: 1px solid #ccc;
 }
 
-.mian .mian-z .main-z-z li:nth-child(-n+3) {
-  border-top: 1px solid #ccc;
-}
-
-.mian .mian-z .main-z-z li:nth-child(3n+3) {
+.main .box_table .col-xs::nth-child(3n+3) {
   border-right: none;
 }
 /*# sourceMappingURL=getmoneyctrl.css.map */

@@ -1,10 +1,6 @@
 $(function(){
-    onlist();
     init();
-    // 点击事件
-    function onlist(){
-        $('.onlist').onclick()
-    };
+    onlist();
     function init (){
         $.ajax({
             type:"GET",
@@ -13,14 +9,18 @@ $(function(){
             success:function(res){
                 console.log(res)
                 var srt = template("crtl_title",{arr:res.result})
-                $(".mian").html(srt)
-                // var goodid = res.
-                // var titleId = res.result[0]._id
-                // console.log(titleId)
+                $(".main").html(srt)
                 listdata();
             }
         })
     };
+
+    // 点击事件,使用事件委托.只可以两级.坑1
+    function onlist (){
+        $('.main').on('tap','.box_title',function(){
+            console.log(122)
+        })
+    }
     function listdata(){
         $.ajax({
             type:"GET",
@@ -29,7 +29,7 @@ $(function(){
             success:function(res){
                 console.log(res)
                 var srt2 = template("crtl_list",{arr:res.result})
-                $(".main-z-z").html(srt2)
+                $(".box_table").html(srt2)
             }
         })
     }
