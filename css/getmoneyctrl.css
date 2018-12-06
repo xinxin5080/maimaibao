@@ -110,7 +110,7 @@
   margin-bottom: 15px;
 }
 
-.main .box_title {
+.main .box .box_title {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -123,11 +123,11 @@
   border-bottom: 1px solid #ccc;
 }
 
-.main .box_table {
+.main .box .box_table {
   background-color: #fff;
 }
 
-.main .box_table .col-xs {
+.main .box .box_table .col-xs {
   width: 33%;
   line-height: 30px;
   float: left;
@@ -136,7 +136,11 @@
   border-bottom: 1px solid #ccc;
 }
 
-.main .box_table .col-xs::nth-child(3n+3) {
+.main .box .box_table .col-xs::nth-child(3n+3) {
   border-right: none;
+}
+
+.main .box .itcall {
+  display: none;
 }
 /*# sourceMappingURL=getmoneyctrl.css.map */

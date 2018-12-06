@@ -90,7 +90,7 @@
 
 .main {
     margin-bottom: 15px;
-
+    .box{
         .box_title {
             display: flex;
             justify-content: space-between;
@@ -114,4 +114,9 @@
                 border-right: none;
             }
         }
+                .itcall{
+                    display: none
+                }
     }
+    }
+    

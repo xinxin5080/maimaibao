@@ -57,13 +57,15 @@
 <!--模板引擎 -->
 <script id="crtl_title" type="text/html">
     {{each arr value index}}
-            <div class="box_title">
-                <h4>{{value.title}}</h4>
-                 <span>></span>
-            </div>
-            <div class="box_table clearfix">
-                <!-- 渲染 -->
-            </div>
+    <div class="box">   
+        <div class="box_title" id="{{value.titleId}}">
+            <h4>{{value.title}}</h4>
+                <span>></span>
+        </div>
+        <div class="box_table  itcall clearfix">
+            <!-- 渲染 -->
+        </div>
+    </div>
     {{/each}}
 </script>
 <!--模板引擎 -->
