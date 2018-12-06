@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>买卖宝-手机版</title>
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/./common.css">
+</head>
+<body>
+    <div class="index">
+        <div class="seek">
+            <input type="text" placeholder="请输入你想比价的商品" class="seekbox">
+            <input type="button" value="搜索" class="seekbut">
+        </div>
+        <!-- 图标 -->
+        <div class="iocn">
+            <ul class="ul_list">
+            </ul>
+        </div>
+        <!-- 商品列表 -->
+        <div class="goods">
+            <div class="goods-title">
+                超值折扣推荐
+            </div>
+            <ul class="ul_goods">
+
+            </ul>
+        </div>
+        <!-- 更多 -->
+        <div class="genduo">
+            <div class="genduo-centen">
+                <a href="" class="genduo-text">更多优惠信息</a>
+            </div>
+
+        </div>
+        <!-- 品牌排行 -->
+        <div class="goods-pp">
+            品牌排行
+        </div>
+        <!-- 底部 -->
+        <div class="foot">
+            <div class="foot-t">
+                <a href="">登录</a>
+                <a href="">注册</a>
+                <a href="" class="aaa">返回顶部</a>
+            </div>
+            <div class="foot-b">
+                <p>
+                    <a href="" class="app-xz">手机app下载</a>
+                    慢慢买手机版 -- 掌上比价平台
+                </p>
+                <p>m.manmanbuy.com</p>
+            </div>
+        </div>
+    </div>
+</body>
+<!--模板引擎 -->
+<script id='iocn_img' type="text/html">
+    {{each arr value index}}
+    <li>
+        <a href="{{value.titlehref}}">
+            {{@ value.img}}
+            <!-- <img src="images/ic_bcj.png" alt=""> -->
+            <p>{{value.name}}</p>
+        </a>
+    </li>
+    {{/each}}
+</script>
+<!--模板引擎 -->
+<script id='goods_tap' type="text/html">
+    {{each arr value index}}
+    <li>
+           {{@ value.productImgSm}}
+            <div class="goods-text">
+                <p class="liang g-title">{{value.productName}}</p>
+                <p class="g-red">{{value.productPinkage}}</p>
+                <div class="goods-button">
+                    <p>{{value.productFrom}} |  {{value.productTime}}</p>
+                    <p>{{value.productComCount}}</p>
+                </div>
+            </div>
+        </li>
+    {{/each}}
+</script>
+
+<script src="../node_modules/art-template/lib/template-web.js"></script>
+</script>
+<script src="../node_modules/jquery/dist/jquery.js"></script>
+<script src="../js/index.js"></script>
+</html>

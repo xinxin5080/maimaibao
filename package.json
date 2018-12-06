@@ -1,0 +1,24 @@
+{
+  "name": "maimaibao",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xinxin5080/maimaibao.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/xinxin5080/maimaibao/issues"
+  },
+  "homepage": "https://github.com/xinxin5080/maimaibao#readme",
+  "dependencies": {
+    "art-template": "^4.13.2",
+    "jquery": "^3.3.1"
+  }
+}

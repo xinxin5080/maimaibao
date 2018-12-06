@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>买卖宝-手机版-比价搜索</title>
+    <link rel="stylesheet" href="../css/getmoneyctrl.css">
+    <link rel="stylesheet" href="../css/./common.css">
+</head>
+
+<body>
+    <div>
+        <!-- 头部 -->
+        <div class="head">
+            <img src="./images/header_logo.png" alt="" class="logo">
+            <img src="./images/header_app.png" alt="" class="app">
+        </div>
+        <div class="seek">
+            <input type="text" placeholder="请输入你想比价的商品" class="seekbox">
+            <input type="button" value="搜索" class="seekbut">
+        </div>
+        <!-- 内容 -->
+        <ul class="mian">
+            <!-- <li class="mian-z">
+                <div class="mian-title">
+                    <span>大家电</span>
+                    <span>》</span>
+                </div>
+                <ul class="main-z-z">
+
+                    <li>
+                        <a href="">电视</a>
+                    </li>
+                    <li>
+                        <a href="">电视</a>
+                    </li>
+                    <li>
+                        <a href="">电视</a>
+                    </li>
+                    <li>
+                        <a href="">电视</a>
+                    </li>
+                    <li>
+                        <a href="">电视</a>
+                    </li>
+                    <li>
+                        <a href="">电视</a>
+                    </li>
+
+                </ul>
+            </li>
+            <li class="mian-z">
+                <div class="mian-title">
+                    <span>大家电</span>
+                    <span>》</span>
+                </div>
+                <ul class="main-z-z">
+
+                    <li>
+                        <a href="">电视</a>
+                    </li>
+                    <li>
+                        <a href="">电视</a>
+                    </li>
+                    <li>
+                        <a href="">电视</a>
+                    </li>
+                    <li>
+                        <a href="">电视</a>
+                    </li>
+                    <li>
+                        <a href="">电视</a>
+                    </li>
+                    <li>
+                        <a href="">电视</a>
+                    </li>
+
+                </ul>
+            </li> -->
+
+
+        </ul>
+        <!-- 底部 -->
+        <div class="foot">
+            <div class="foot-t">
+                <a href="">登录</a>
+                <a href="">注册</a>
+                <a href="" class="aaa">返回顶部</a>
+            </div>
+            <div class="foot-b">
+                <p>
+                    <a href="" class="app-xz">手机app下载</a>
+                    慢慢买手机版 -- 掌上比价平台
+                </p>
+                <p>m.manmanbuy.com</p>
+            </div>
+        </div>
+    </div>
+</body>
+<!--模板引擎 -->
+<script id="crtl_title" type="text/html">
+    {{each arr value index}}
+    <li class="mian-z">
+        <div class="mian-title">
+            <span>{{value.title}}</span>
+            <span class="onlist">》</span>
+        </div>
+        <ul class="main-z-z">
+            <li>
+                <a href="">电视</a>
+            </li>
+        </ul>
+    </li>
+    {{/each}}
+    <!--  -->
+</script>
+<!--模板引擎 -->
+<script id="crtl_list" type="text/html">
+    {{each arr value index}}
+        <li>
+            <a href=""></a>
+        </li>
+    {{/each}}
+    <!--  -->
+</script>
+<script src="../common/template-web.js"></script>
+</script>
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script src="../js/category.js"></script>
+
+</html>
