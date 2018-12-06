@@ -25,47 +25,18 @@
         <!-- 内容 -->
         <div class="main">
             <div class="title">
-                <div class="title-l">   
-                    <a href="">首页> </a>
+                <div class="title-l">
+                    <!-- <a href="">首页> </a>
                     <a href="">分类大全> </a>
-                    <a href="">电视> </a>
+                    <a href="">电视> </a> -->
                 </div>
                 <div class="title-r">
                     <button>选择</button>
                 </div>
             </div>
             <div class="goods">
-                <ul>
-                    <a href="" class="box">
-                        <div class="goods-t">
-                            <img src="https://img.alicdn.com/bao/uploaded/i5/TB1HDKYgQ.HL1JjSZFu6w88dXXa_124819.jpg" alt="">
-                        </div>
-                        <div class="goods-b">
-                            <div class="g-title">
-                                    乐视TV(Letv)S50 Air全配版2D 50英寸 全高清LED液晶电视
-                            </div>
-                            <span>$19999</span>
-                            <div class="g-button">
-                                <span>标价(1)</span>
-                                <span>评价(2)</span>
-                            </div>
-                        </div>
-                    </a>
-                    <a href="" class="box">
-                        <div class="goods-t">
-                            <img src="https://img.alicdn.com/bao/uploaded/i5/TB1HDKYgQ.HL1JjSZFu6w88dXXa_124819.jpg" alt="">
-                        </div>
-                        <div class="goods-b">
-                            <div class="g-title">
-                                    乐视TV(Letv)S50 Air全配版2D 50英寸 全高清LED液晶电视
-                            </div>
-                            <span>$19999</span>
-                            <div class="g-button">
-                                <span>标价(1)</span>
-                                <span>评价(2)</span>
-                            </div>
-                        </div>
-                    </a>
+                <ul class="goodsData">
+
                 </ul>
             </div>
             <!-- 分页 -->
@@ -100,7 +71,32 @@
         </div>
     </div>
 </body>
-
+<!-- 模板 -->
+<script id="goodsList" type="text/html">
+    {{each arr value index}}
+      <a href=""class="box">
+            <div class="goods-t">
+                {{@value.productImg}}
+            </div>
+            <div class="goods-b">
+                <div class="g-title">
+                    {{value.productName}}
+                </div>
+                <span>{{value.productPrice}}</span>
+                <div class="g-button">
+                    <span>{{value.productQuote}}</span>
+                    <span>{{value.productQuote}}</span>
+                </div>
+            </div>
+        </a>
+    {{/each}}   
+</script>
+<!-- 普通模板的写法 -->
+<script id="goodsName" type="text/html">
+    <a href="">首页> </a>
+    <a href="">分类大全> </a>
+    <a href="">{{brandName}}> </a> 
+</script>
 <script src="../common/template-web.js"></script>
 </script>
 <script src="http://code.jquery.com/jquery-latest.js"></script>

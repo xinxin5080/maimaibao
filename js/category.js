@@ -22,14 +22,28 @@ $(function(){
             var arr = $(this).children()[1]
             // 获取上个请求保存this(.box_title)的id
             var Id = event.target.id
-            // 将id拼接在get请求中 
-          $.get("http://193.112.55.79:9090/api/getcategory","titleid="+Id,function(res){
-            console.log(res)
-            var srt2 = template("crtl_list",{arr:res.result})
-            $(".box_table").html(srt2)
-            // 将其他的隐藏起来
-            $(arr).toggle()
-          },"json")
+            // 将id拼接在get请求中
+            // 第一种请求方式 
+            $.ajax({
+                type:"GET",
+                url:"http://193.112.55.79:9090/api/getcategory?titleid="+Id,
+                dataType:"json",
+                success:function(res){
+                    var srt2 = template("crtl_list",{arr:res.result})
+                        $(".box_table").html(srt2)
+                        // 将其他的隐藏起来
+                        $(arr).toggle()
+                    
+                }
+            })
+            // 第二种请求方式
+        //   $.get("http://193.112.55.79:9090/api/getcategory","titleid="+Id,function(res){
+        //     console.log(res)
+        //     var srt2 = template("crtl_list",{arr:res.result})
+        //     $(".box_table").html(srt2)
+        //     // 将其他的隐藏起来
+        //     $(arr).toggle()
+        //   },"json")
         })
     }
 })

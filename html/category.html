@@ -71,7 +71,9 @@
 <!--模板引擎 -->
 <script id="crtl_list" type="text/html">
     {{each arr value index}}
-    <div class="col-xs"><a href="">{{value.category}}</a></div>
+    <div class="col-xs">
+        <a href="productlist.html?categorybyid={{value.categoryId}}">{{value.category}}</a>
+    </div>
     {{/each}}
 </script>
 <script src="../common/template-web.js"></script>
